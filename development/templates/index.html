@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:rgb(50, 59, 97);">
+    <head>
+        <title>WhatIsInMyPDF.fr</title>
+        <script>var message={message};</script>
+    </head>
+    <body>
+        <h1 style="text-align:center;font-size:300%;font-family:verdana;">Bienvenue sur WhatIsInMyPDF.fr<h1>
+        <h3 style="text-align:center;font-size:150%;font-family:verdana;">Vous pouvez deposer votre ficher PDF ici et nous nous chargons d'en extraire le texte</h3>
+        <h3 style="text-align:center;font-size:150%;font-family:verdana;">Enjoy</h3>
+        <div class="container">{{message}}</div>
+        <form method=post enctype=multipart/form-data style="text-align:center;">
+        <input type=file name=file style="text-align:center;">
+        <input type=submit value=Upload style="text-align:center;">
+        </form>
+
+        <ul>
+            <li style="color: rgb(209, 213, 216);"><strong>route(&quot;/documents&quot;):</strong></li>
+        </ul>
+        <p><span style="color: rgb(209, 213, 216);"><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; La m&eacute;thode GET renvoie un formulaire de t&eacute;l&eacute;chargement HTML:</em></span></p>
+        <p><span style="color: rgb(209, 213, 216);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; La m&eacute;thode POST peut &ecirc;tre utilis&eacute;e pour t&eacute;l&eacute;charger un fichier PDF.</span></p>
+        <p><span style="color: rgb(209, 213, 216);">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+        <ul>
+            <li style="color: rgb(209, 213, 216);"><strong>route(&quot;/documents/int:doc_id&quot;)</strong></li>
+        </ul>
+        <p><span style="color: rgb(209, 213, 216);"><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Informations sur un document:</em></span></p>
+        <p><span style="color: rgb(209, 213, 216);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; La m&eacute;thode GET renvoie des m&eacute;tadonn&eacute;es sur le document, sp&eacute;cifi&eacute; par le param&egrave;tre ID.</span></p>
+        <p><span style="color: rgb(209, 213, 216);">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+        <ul>
+            <li style="color: rgb(209, 213, 216);"><strong>route(&quot;/text/int:doc_id&quot;)</strong></li>
+        </ul>
+        <p><span style="color: rgb(209, 213, 216);"><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Contenu d&apos;un document.</em></span></p>
+        <p><span style="color: rgb(209, 213, 216);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; La m&eacute;thode GET retourne le contenu d&apos;un document, sp&eacute;cifi&eacute; par le param&egrave;tre ID.</span></p>
+    </body>
+</html>
