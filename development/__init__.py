@@ -1,4 +1,4 @@
-"""__init__ : craation of the Flask app"""
+"""__init__ : creation of the Flask app"""
 from pathlib import Path
 from werkzeug.utils import secure_filename
 from flask import Response, render_template, Blueprint, request, Flask, jsonify

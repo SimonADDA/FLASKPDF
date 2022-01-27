@@ -12,8 +12,6 @@ from pdfminer.pdfpage import PDFPage
 from pdfminer.pdfparser import PDFParser
 
 
-
-
 def create_connection(db_file):
     """ create a database connection to the SQLite database
         specified by db_file
@@ -39,14 +37,14 @@ def create_pdf(conn, project):
     return cur.lastrowid
 
 
-def insert_row(Keywords=None, Author=None, Creator=None, Title=None, CreationDate=None, Producer=None, ModDate=None, value=None, nb_page=None):
+def insert_row(keywords=None, author=None, creator=None, title=None, creationDate=None, producer=None, moddate=None, value=None, nb_page=None):
     """Insert the rows extract in Database"""
     database = r"development/database/pdf_extraction.db"
     # create a database connection
     conn = create_connection(database)
     with conn:
         # create a new pdf
-        pdf_info = (CreationDate, Author, Creator, Producer, Keywords, Title, ModDate, nb_page, value)
+        pdf_info = (creationDate, author, creator, producer, keywords, title, moddate, nb_page, value)
         return create_pdf(conn, pdf_info)
 
 
